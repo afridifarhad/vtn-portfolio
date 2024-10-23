@@ -45,14 +45,17 @@ function Home() {
             </p>
             <br />
             {/* social media icons */}
-          <div className="flex justify-between">
+          <div className="flex flex-col items-center md:flex-row justify-between space-y-6 md:space-y-0">
 
           <div className="space-y-2">
-                <h1 className="font-bold">Avalible On</h1>
+                <h1 className="font-bold text-center">Avalible On</h1>
                 <ul className="flex space-x-5">
+                  <a href="http://www.facebook.com" target="_blank">
                     <li>
-                    <FaSquareFacebook  className="text-2xl cursor-pointer" />
+                    <FaSquareFacebook  className="text-2xl cursor-pointer" /> 
                     </li>
+                  
+                  </a>
                     <li>
                     <FaLinkedin className="text-2xl cursor-pointer" />
                     </li>
@@ -84,11 +87,13 @@ function Home() {
           </div>
 
           {/* img */}
-          <div className="md:w-1/2 md:ml-48 md:mt-20 order-1">
+          <div className="md:w-1/2 md:ml-48 md:mt-20 mt-8 order-1">
           <img src={pic} className="rounded-full md:w-[450px] md:h-[450px]" alt="" />
           </div>
         </div>
       </div>
+     
+      <hr />
     </>
   );
 }

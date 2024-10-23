@@ -14,19 +14,19 @@ function Navbar() {
       },
       {
         id: 2,
-        text: "About"
+        text: "About Me"
       },
       {
         id: 3,
-        text: "Portfolio"
+        text: "Skills"
       },
       {
         id: 4,
-        text: "Experience"
+        text: "Projects"
       },
       {
         id: 5,
-        text: "Contacts"
+        text: "Contact"
       }
 
     ]
@@ -34,7 +34,7 @@ function Navbar() {
 
   return (
   <>
-  <div className='max-w-screen-2xl container mx-auto px-4 md:px:20 shadow-md h-16 fixed left-0 right-0 top-0' >
+  <div className='max-w-screen-2xl container mx-auto px-4 md:px:20 shadow-md h-16 fixed left-0 right-0 top-0 z-50 bg-white' >
     <div className='flex justify-between h-16 items-center'>
         <div className='flex'>
             <img src={pic} className='h-12 w-12 rounded-full' alt="" />
