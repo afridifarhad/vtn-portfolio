@@ -7,9 +7,34 @@ import { IoCloseSharp } from "react-icons/io5";
 
 function Navbar() {
     const [menu, setMenu] = useState(false)
+    const navItems = [
+      {
+        id: 1,
+        text: "Home"
+      },
+      {
+        id: 2,
+        text: "About"
+      },
+      {
+        id: 3,
+        text: "Portfolio"
+      },
+      {
+        id: 4,
+        text: "Experience"
+      },
+      {
+        id: 5,
+        text: "Contacts"
+      }
+
+    ]
+
+
   return (
   <>
-  <div className='max-w-screen-2xl container mx-auto px-4 md:px:20 shadow-md h-16' >
+  <div className='max-w-screen-2xl container mx-auto px-4 md:px:20 shadow-md h-16 fixed left-0 right-0 top-0' >
     <div className='flex justify-between h-16 items-center'>
         <div className='flex'>
             <img src={pic} className='h-12 w-12 rounded-full' alt="" />
@@ -21,12 +46,11 @@ function Navbar() {
         {/* desktop navbar */}
         <div>
             <ul className='hidden md:flex space-x-8'>
-                <li>Home</li>
-                <li>About</li>
-                <li>Portfolio</li>
-                <li>Experience</li>
-                <li>Contacts</li>
-
+               {
+                navItems.map(({id, text})=> (
+                  <li className='hover:scale-105 duration-200 cursor-pointer' key={id}>{text}</li>
+                ))
+               }
 
             </ul>
             <div className='md:hidden' onClick={() => setMenu(!menu)}>
@@ -40,12 +64,12 @@ function Navbar() {
     
     {/* mobile navbar */}
     {menu && (
-    <ul className='md:hidden flex flex-col items-center justify-center h-screen space-y-4 font-bold'>
-                <li>Home</li>
-                <li>About</li>
-                <li>Portfolio</li>
-                <li>Experience</li>
-                <li>Contacts</li>
+    <ul className='md:hidden flex flex-col items-center justify-center h-screen space-y-4 text-xl '>
+                {
+                navItems.map(({id, text})=> (
+                  <li className='hover:scale-105 duration-200 cursor-pointer font-semibold ' key={id}>{text}</li>
+                ))
+               }
     </ul>
 
     )}
