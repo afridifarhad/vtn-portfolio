@@ -58,15 +58,24 @@ function Home() {
                       <FaSquareFacebook className="text-2xl cursor-pointer" />
                     </li>
                   </a>
+                  <a href="https://www.linkedin.com/in/farhad-afridi-308b58290/" target="_blank">
                   <li>
                     <FaLinkedin className="text-2xl cursor-pointer" />
                   </li>
+                  
+                  </a>
+                  <a href="http://www.youtube.com" target="_blank">
                   <li>
                     <FaYoutube className="text-2xl cursor-pointer" />
                   </li>
+                  
+                  </a>
+                  <a href="http://www.telegram.com" target="_blank">
                   <li>
                     <FaTelegram className="text-2xl cursor-pointer" />
                   </li>
+                  
+                  </a>
                 </ul>
               </div>
 
