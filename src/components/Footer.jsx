@@ -17,9 +17,9 @@ function Footer() {
                </div>
                <div className='mt-8 border-gray-700 pt-8 flex flex-col items-center '>
                 <p className='text-sm '>
-                    &copy; Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    &copy; 2024 Full stack Developer. All rights reserved.
                 </p>
-                  <p className='text-sm '>Lorem ipsum dolor sit amet consectetur.</p>
+                  <p className='text-sm '>afridifarhad@gmail.com</p>
 
                </div>
             </div>

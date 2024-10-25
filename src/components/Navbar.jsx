@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import pic from '../../public/photo.avif'
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
-
+import {Link} from 'react-scroll'
 
 
 function Navbar() {
@@ -38,7 +38,7 @@ function Navbar() {
     <div className='flex justify-between h-16 items-center'>
         <div className='flex'>
             <img src={pic} className='h-12 w-12 rounded-full' alt="" />
-            <h1 className='font-semibold text-xl cursor-pointer'>Farha<span className='text-green-500 text-2xl' >d</span>
+            <h1 className='font-semibold text-xl cursor-pointer'>Farha<span className='text-red-700 text-2xl' >d</span>
              <p className='text-sm'>Web developer</p>
              </h1>
 
@@ -48,14 +48,23 @@ function Navbar() {
             <ul className='hidden md:flex space-x-8'>
                {
                 navItems.map(({id, text})=> (
-                  <li className='hover:scale-105 duration-200 cursor-pointer' key={id}>{text}</li>
+                  <li className='hover:scale-105 duration-200 cursor-pointer' key={id}>
+ <Link to={text}
+                    smooth={true}
+                    duration={500}
+                    offset={-70}
+                    activeClass='active'
+                    >
+                    {text}
+                    
+                    </Link>                    </li>
                 ))
                }
 
             </ul>
             <div className='md:hidden' onClick={() => setMenu(!menu)}>
 
-            {menu ? <AiOutlineMenu size={24} /> : <IoCloseSharp size={24} />}
+            {menu ? <IoCloseSharp size={24} /> : <AiOutlineMenu size={24} />}
            
 
             </div>
@@ -64,13 +73,27 @@ function Navbar() {
     
     {/* mobile navbar */}
     {menu && (
-    <ul className='md:hidden flex flex-col items-center justify-center h-screen space-y-4 text-xl '>
+      <div className='bg-white'> 
+    <ul className='md:hidden flex flex-col items-center justify-center h-screen space-y-3 text-xl '>
                 {
-                navItems.map(({id, text})=> (
-                  <li className='hover:scale-105 duration-200 cursor-pointer font-semibold ' key={id}>{text}</li>
+                  navItems.map(({id, text})=> (
+                  <li className='hover:scale-105 duration-200 cursor-pointer font-semibold ' key={id}>
+                    <Link
+                    onClick={() => setMenu(!menu)}
+                    to={text}
+                    smooth={true}
+                    duration={500}
+                    offset={-70}
+                    activeClass='active'
+                    >
+                    {text}
+                    
+                    </Link>
+                    </li>
                 ))
-               }
+              }
     </ul>
+              </div>
 
     )}
     
