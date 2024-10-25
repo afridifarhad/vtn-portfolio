@@ -38,7 +38,7 @@ function Contact() {
               
       </textarea>
             </div>
-            <button className="bg-black text-white rounded-xl px-3 py-2 hover:bg-slate-700 duration-300">Send</button>
+            <button className="bg-green-700 text-white rounded-xl px-3 py-2 hover:bg-black duration-300">Send</button>
           </form>
         </div>
       </div>
