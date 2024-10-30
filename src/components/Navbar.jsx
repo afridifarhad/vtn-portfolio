@@ -4,6 +4,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from 'react-scroll';
 
+
 function Navbar() {
     const [menu, setMenu] = useState(false);
     const navItems = [
@@ -43,6 +44,7 @@ function Navbar() {
                                     </Link>
                                 </li>
                             ))}
+                            {/* desktop Navbar */}
                         </ul>
                         <div className='md:hidden' onClick={() => setMenu(!menu)}>
                             {menu ? <IoCloseSharp size={24} /> : <AiOutlineMenu size={24} />}
